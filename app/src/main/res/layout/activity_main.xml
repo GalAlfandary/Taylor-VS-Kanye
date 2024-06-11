@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/main_FAB_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:icon="@drawable/baseline_arrow_left_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:backgroundTint="@color/light_blue_200"
+            android:layout_marginBottom="@dimen/bottom_margin_default"
+            android:layout_marginLeft="@dimen/default_margin"
+            />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/main_FAB_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:icon="@drawable/baseline_arrow_right_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="@color/light_blue_200"
+            android:layout_marginBottom="@dimen/bottom_margin_default"
+            android:layout_marginRight="@dimen/default_margin"
+            />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_alignParentRight="true">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_heart3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/heart" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_IMG_taylor"
+        android:layout_width="@dimen/img_width_height"
+        android:layout_height="@dimen/img_width_height"
+        app:srcCompat="@drawable/taylor"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/taylors_margin_default"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/default_top_layout"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_1_1"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_1_2"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_1_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_1_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_1_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_1_6"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_1_7"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="clip_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_2_1"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_2_2"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_2_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_2_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_2_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_2_6"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_2_7"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_3_1"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_3_2"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_3_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_3_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_3_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_3_6"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_3_7"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</RelativeLayout>

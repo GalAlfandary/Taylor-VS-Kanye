@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScoreActivity">
+    tools:context=".ScoreActivity"
+    android:background="@color/light_blue_200">
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/LBL_status"
         android:layout_width="wrap_content"

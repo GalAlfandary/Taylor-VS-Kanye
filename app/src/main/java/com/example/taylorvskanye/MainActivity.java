@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int LANE_COUNT = 3;
     private static final int ROWS_COUNT = 6;
-    private static final long DELAY = 1000L;
+    private static final long DELAY = 600L;
     private ExtendedFloatingActionButton main_FAB_left;
     private ExtendedFloatingActionButton main_FAB_right;
     private AppCompatImageView main_IMG_taylor_center;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         if (gameLogic.isGameOver()) {
             // Handle game over
             Log.d("GAME STATUS","YOU LOSE ");
-            changeActivity("GAME OVER \n😭");
+            changeActivity("Kanye got you! 😭\n Please try again");
         }
 //        else {
 //            refreshKanyeImages();
@@ -147,9 +147,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         main_IMG_hearts = new AppCompatImageView[] {
-                findViewById(R.id.main_IMG_heart1),
+                findViewById(R.id.main_IMG_heart3),
                 findViewById(R.id.main_IMG_heart2),
-                findViewById(R.id.main_IMG_heart3)
+                findViewById(R.id.main_IMG_heart1)
         };
     }
 

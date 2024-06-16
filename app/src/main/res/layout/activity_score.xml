@@ -6,7 +6,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScoreActivity"
-    android:background="@color/light_blue_200">
+>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/bg"
+        android:scaleType="centerCrop"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/TAYLOR_THE_ERAS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/taylor_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/taylors_margin_default"
+        />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/LBL_status"
         android:layout_width="wrap_content"
@@ -14,8 +30,22 @@
         android:layout_centerInParent="true"
         tools:text="STATUS"
         android:gravity="center"
-        android:textSize="75sp"
-        android:textColor="@color/black"
-        android:textStyle="bold" />
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+<!--    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+<!--        android:id="@+id/floatingActionButton"-->
+<!--        android:layout_width="@dimen/default_width_button"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        android:background="@color/pink_200"-->
+<!--        android:text="Try Again 🎤"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="@dimen/margin_bottom_button"-->
+<!--        app:srcCompat="@drawable/ic_launcher_background" />-->
+
 
 </RelativeLayout>

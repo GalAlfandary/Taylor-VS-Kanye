@@ -6,4 +6,6 @@
     <dimen name="img_width_height">100dp</dimen>
     <dimen name="default_top_layout">56dp</dimen>
     <dimen name="default_in_layout_width">100dp</dimen>
+    <dimen name="margin_bottom_button">50dp</dimen>
+    <dimen name="default_width_button">150dp</dimen>
 </resources>

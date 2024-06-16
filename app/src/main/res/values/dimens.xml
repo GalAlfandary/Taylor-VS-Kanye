@@ -3,7 +3,7 @@
     <dimen name="default_margin">16dp</dimen>
     <dimen name="bottom_margin_default">32dp</dimen>
     <dimen name="taylors_margin_default">100dp</dimen>
-    <dimen name="img_width_height">95dp</dimen>
+    <dimen name="img_width_height">100dp</dimen>
     <dimen name="default_top_layout">56dp</dimen>
     <dimen name="default_in_layout_width">100dp</dimen>
 </resources>

@@ -8,4 +8,5 @@
     <dimen name="default_in_layout_width">100dp</dimen>
     <dimen name="margin_bottom_button">50dp</dimen>
     <dimen name="default_width_button">150dp</dimen>
+    <dimen name="try_again_button_padding">20dp</dimen>
 </resources>

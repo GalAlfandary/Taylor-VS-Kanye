@@ -3,7 +3,6 @@ package com.example.taylorvskanye.Logic;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.Arrays;
@@ -17,12 +16,15 @@ public class GameLogic {
     private int taylorLane = 1; // Start in the middle lane
     private int[][] matrix = new int[ROWS_COUNT][LANE_COUNT];
     private Random random = new Random();
-    private Toast toast1;
+    private Toast toast;
     private Vibrator vibrator;
 
-    public GameLogic(int life,Toast toast1 , Vibrator vibrator) {
+    public GameLogic() {
+    }
+
+    public GameLogic(int life, Toast toast , Vibrator vibrator) {
         this.life=life;
-        this.toast1=toast1;
+        this.toast=toast;
         this.vibrator=vibrator;
     }
 
@@ -71,12 +73,10 @@ public class GameLogic {
     }
 
     public void updateKanyePositions() {
-        checkCollision();
         // Shift all rows down
         for (int row = ROWS_COUNT - 1; row > 0; row--) {
             System.arraycopy(matrix[row - 1], 0, matrix[row], 0, LANE_COUNT);
         }
-
         // Clear the top row
         Arrays.fill(matrix[0], 0);
 
@@ -86,7 +86,6 @@ public class GameLogic {
             int randomLane = random.nextInt(LANE_COUNT);
             matrix[0][randomLane] = 1;
         }
-
         // Debug: Log the matrix state
         Log.d("GameLogic", "Matrix state after update:");
         for (int row = 0; row < ROWS_COUNT; row++) {
@@ -94,18 +93,18 @@ public class GameLogic {
         }
     }
 
-    public void checkCollision() {
+    public boolean checkCollision() {
         boolean collision = matrix[ROWS_COUNT - 1][taylorLane] == 1;
         Log.d("GameLogic", "Collision check at row " + (ROWS_COUNT - 1) + ", lane " + taylorLane + ": " + collision);
         if (collision){
             increaseCrashes();
             decreaseLife();
             Log.d("GAME STATUS","YOU CRASHED "+getCrashes());
-            toast1.show();
+            toast.show();
             vibrator.vibrate(VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE));
         }
+        return collision;
     }
-
 
     public int[][] getMatrix() {
         return matrix;
@@ -134,5 +133,6 @@ public class GameLogic {
     public boolean isGameOver() {
         return life <= 0;
     }
+
 }
 

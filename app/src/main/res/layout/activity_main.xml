@@ -47,6 +47,7 @@
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/hearts_layout"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginTop="0dp"
@@ -139,7 +140,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/default_top_layout"
+        android:layout_below="@id/hearts_layout"
         android:orientation="horizontal"
         android:layout_marginBottom="@dimen/taylors_margin_default">
         <androidx.appcompat.widget.LinearLayoutCompat

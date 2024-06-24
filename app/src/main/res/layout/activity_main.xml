@@ -21,6 +21,7 @@
             android:clickable="true"
             app:icon="@drawable/arrow_l"
             app:iconTint="@color/blue_grey_900"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
             android:backgroundTint="@color/pink_200"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
@@ -35,6 +36,7 @@
             android:clickable="true"
             app:icon="@drawable/arrow_r"
             app:iconTint="@color/blue_grey_900"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full"
             android:backgroundTint="@color/pink_200"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
@@ -92,7 +94,7 @@
             android:id="@+id/main_IMG_taylor_left"
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
-            app:srcCompat="@drawable/taylor2"
+            app:srcCompat="@drawable/taylor"
             android:layout_gravity="center"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -108,7 +110,7 @@
             android:id="@+id/main_IMG_taylor_center"
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
-            app:srcCompat="@drawable/taylor2"
+            app:srcCompat="@drawable/taylor"
             android:layout_gravity="center" />
     </androidx.appcompat.widget.LinearLayoutCompat>
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -123,7 +125,7 @@
             android:id="@+id/main_IMG_taylor_right"
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
-            app:srcCompat="@drawable/taylor2"
+            app:srcCompat="@drawable/taylor"
 
             android:layout_gravity="center" />
 
@@ -152,7 +154,7 @@
                 android:id="@+id/main_IMG_kanye_1_1"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -160,7 +162,7 @@
                 android:id="@+id/main_IMG_kanye_1_2"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -168,7 +170,7 @@
                 android:id="@+id/main_IMG_kanye_1_3"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -176,7 +178,7 @@
                 android:id="@+id/main_IMG_kanye_1_4"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -184,7 +186,7 @@
                 android:id="@+id/main_IMG_kanye_1_5"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -192,7 +194,7 @@
                 android:id="@+id/main_IMG_kanye_1_6"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -210,7 +212,7 @@
                 android:id="@+id/main_IMG_kanye_2_1"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -218,7 +220,7 @@
                 android:id="@+id/main_IMG_kanye_2_2"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -226,7 +228,7 @@
                 android:id="@+id/main_IMG_kanye_2_3"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -234,7 +236,7 @@
                 android:id="@+id/main_IMG_kanye_2_4"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -242,7 +244,7 @@
                 android:id="@+id/main_IMG_kanye_2_5"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -250,7 +252,7 @@
                 android:id="@+id/main_IMG_kanye_2_6"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -269,7 +271,7 @@
                 android:id="@+id/main_IMG_kanye_3_1"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -277,7 +279,7 @@
                 android:id="@+id/main_IMG_kanye_3_2"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -285,7 +287,7 @@
                 android:id="@+id/main_IMG_kanye_3_3"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -293,7 +295,7 @@
                 android:id="@+id/main_IMG_kanye_3_4"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -301,7 +303,7 @@
                 android:id="@+id/main_IMG_kanye_3_5"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
@@ -309,7 +311,7 @@
                 android:id="@+id/main_IMG_kanye_3_6"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
-                app:srcCompat="@drawable/kanye2"
+                app:srcCompat="@drawable/kanye"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>

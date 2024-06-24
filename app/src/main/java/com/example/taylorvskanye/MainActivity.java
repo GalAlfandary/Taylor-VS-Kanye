@@ -1,17 +1,13 @@
 package com.example.taylorvskanye;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
-
 import com.example.taylorvskanye.Logic.GameLogic;
+import com.example.taylorvskanye.utilities.SignalManager;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import java.util.Timer;
@@ -41,9 +37,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViews();
-        Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
-        Toast toast = Toast.makeText(this, "OHH LOOK WHAT YOU MADE ME DO 🐍" , Toast.LENGTH_SHORT);
-        gameLogic = new GameLogic(main_IMG_hearts.length,toast,vibrator);
+        SignalManager.init(this);
+        gameLogic = new GameLogic(main_IMG_hearts.length);
         initGameLogic();
         initViews();
     }
@@ -55,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
             main_IMG_hearts[main_IMG_hearts.length-gameLogic.getCrashes()].setVisibility(View.INVISIBLE);
         }
         if (gameLogic.isGameOver()) {
-            // Handle game over
             Log.d("GAME STATUS","YOU LOSE ");
             changeActivity("Kanye got you! 😭\n Please try again");
         }
@@ -69,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initGameLogic() {
-        //gameLogic = new GameLogic();
         main_IMG_taylor_left.setVisibility(View.INVISIBLE);
         main_IMG_taylor_right.setVisibility(View.INVISIBLE);
 
@@ -111,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     private void findViews() {
         main_FAB_left = findViewById(R.id.main_FAB_left);
         main_FAB_right = findViewById(R.id.main_FAB_right);
@@ -140,9 +132,14 @@ public class MainActivity extends AppCompatActivity {
                 public void run() {
                     gameLogic.updateKanyePositions();
                     runOnUiThread(() -> updateUi());
-                    gameLogic.checkCollision();
+                    if(gameLogic.checkCollision()) {
+                        runOnUiThread(() -> {
+                            SignalManager.getInstance().toast("OHH LOOK WHAT YOU MADE ME DO 🐍");
+                            SignalManager.getInstance().vibrate(1000);
+                        });
+                    }
                 }
-            },0L,DELAY);
+            }, 0L, DELAY);
         }
     }
     @Override
@@ -156,6 +153,5 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         timer.cancel();
     }
-
 
 }

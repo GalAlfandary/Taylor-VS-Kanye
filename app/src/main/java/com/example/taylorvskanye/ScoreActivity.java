@@ -2,13 +2,7 @@ package com.example.taylorvskanye;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 
@@ -34,7 +28,7 @@ public class ScoreActivity extends AppCompatActivity {
         try_again_button.setOnClickListener(view -> {
             Intent intent = new Intent(ScoreActivity.this, MainActivity.class);
             startActivity(intent);
-            finish(); // Optional: Close the current activity
+            finish();
         });
     }
 

@@ -51,9 +51,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts"
             />
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCuttO2BorpejMweY5L0rIi9x7b5cMtssM"/>
+
     </application>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>

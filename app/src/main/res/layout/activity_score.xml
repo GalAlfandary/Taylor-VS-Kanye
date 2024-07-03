@@ -5,49 +5,115 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScoreActivity"
->
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/main_background"
+    android:background="@drawable/bg"
+    tools:context=".ScoreActivity">
+
+
+    <!--    <androidx.appcompat.widget.AppCompatImageView-->
+    <!--        android:id="@+id/TAYLOR_THE_ERAS"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:srcCompat="@drawable/taylor_logo"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginTop="@dimen/taylors_margin_default"-->
+    <!--        />-->
+
+    <LinearLayout
+        android:id="@+id/status_score_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/LBL_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_btn_text_size"
+            android:textStyle="bold"
+            app:fontFamily="@font/baloo_tamma"
+            tools:text="STATUS"
+            android:layout_weight="1"/>
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/LBL_your_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your score:"
+            android:textSize="25sp"
+            android:fontFamily="@font/baloo_tamma"
+            android:textColor="@color/white"
+            android:layout_weight="1">
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/baloo_tamma"
+            tools:text="000"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/editText_name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/enter_your_name_hint"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/bg"
-        android:scaleType="centerCrop"/>
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/TAYLOR_THE_ERAS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/taylor_logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/taylors_margin_default"
-        />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/LBL_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/baloo_tamma"
-        tools:text="STATUS" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/try_again_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/try_again_button"
-        android:textColor="@color/blue_grey_900"
-        android:textSize="30sp"
-        android:paddingVertical="@dimen/try_again_button_padding"
-        android:layout_marginHorizontal="@dimen/try_again_button_margin_horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@id/status_score_lbl"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="@dimen/margin_bottom_button"
-        android:backgroundTint="@color/pink_200"/>
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_score_btn"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/try_again_button_margin_horizontal"
+            android:layout_weight="1"
+            android:fontFamily="@font/baloo_tamma"
+            android:paddingVertical="@dimen/try_again_button_padding"
+            android:paddingTop="10dp"
+            android:text="Save Score"
+            android:textSize="@dimen/default_btn_text_size"
+           />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/try_again_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/try_again_button_margin_horizontal"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/margin_bottom_button"
+            android:backgroundTint="@color/pink_200"
+            android:fontFamily="@font/baloo_tamma"
+            android:paddingVertical="@dimen/try_again_button_padding"
+            android:text="@string/try_again_button"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_btn_text_size" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>

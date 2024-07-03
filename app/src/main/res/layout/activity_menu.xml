@@ -1,45 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
 
-  <androidx.appcompat.widget.AppCompatImageView
-      android:id="@+id/main_background"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      app:srcCompat="@drawable/bg"
-      android:scaleType="centerCrop"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/bg" />
 
-  <com.google.android.material.textview.MaterialTextView
-      android:id="@+id/menu_lbl"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_centerHorizontal="true"
-      android:text="Taylor VS Kanye"
-      android:textColor="@color/white"
-      app:fontFamily="@font/baloo_tamma"
-      android:textSize="45sp"/>
 
-  <androidx.appcompat.widget.AppCompatImageView
-      android:id="@+id/menu_mic"
-      android:layout_width="@dimen/menu_mic_height_width"
-      android:layout_height="@dimen/menu_mic_height_width"
-      app:srcCompat="@drawable/microphone_svgrepo_com"
-      android:layout_below="@id/menu_lbl"
-      android:layout_centerHorizontal="true"/>
-<LinearLayout
-  android:layout_width="match_parent"
-  android:layout_height="100dp"
-  android:orientation="vertical"
-    android:layout_below="@id/menu_mic">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/menu_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/menu_logo_size"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/menu_logo" />
 
-</LinearLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gameplay_settings"
+        android:layout_below="@id/menu_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gameplay_heading"
+        android:fontFamily="@font/baloo_tamma"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true">
 
+    </com.google.android.material.textview.MaterialTextView>
+
+    <LinearLayout
+        android:id="@+id/switches_texts_layout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@id/gameplay_settings"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        >
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/fast_or_slow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/speed_switch_text"
+            android:textColor="@color/white"
+            android:textOff="Slow"
+            android:textOn="Fast"
+            android:textSize="15sp"
+            android:fontFamily="@font/baloo_tamma"
+            app:showText="true"
+            app:switchTextAppearance="@color/white"
+            app:thumbTint="@color/pink_200"
+            app:trackTint="@color/pink_200_fade"
+            android:scaleX="2"
+            android:scaleY="2"
+            app:switchPadding="10dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        </View>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/sensors_or_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/controls_switch_text"
+            android:textColor="@color/white"
+            android:textOff="Buttons"
+            android:textOn="Sensors"
+            android:textSize="15sp"
+            android:fontFamily="@font/baloo_tamma"
+            app:showText="true"
+            app:switchTextAppearance="@color/white"
+            app:thumbTint="@color/pink_200"
+            app:trackTint="@color/pink_200_fade"
+            android:scaleX="2"
+            android:scaleY="2"
+            app:switchPadding="10dp"
+            />
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/sensors_radioButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="@string/controls_switch_text"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:fontFamily="@font/baloo_tamma"-->
+<!--            android:textSize="@dimen/default_btn_text_size"/>-->
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/switches_texts_layout"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="@dimen/margin_bottom_button"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start_game_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/try_again_button_margin_horizontal"
+            android:layout_weight="1"
+            android:backgroundTint="@color/pink_200"
+            android:fontFamily="@font/baloo_tamma"
+            android:text="@string/start_game"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_btn_text_size"
+            android:paddingTop="10dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/high_scores_btn"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/try_again_button_margin_horizontal"
+            android:layout_weight="1"
+            android:fontFamily="@font/baloo_tamma"
+            android:text="@string/leaderboard"
+            android:textSize="@dimen/default_btn_text_size"
+            android:paddingTop="10dp"/>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

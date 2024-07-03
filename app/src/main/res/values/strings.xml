@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Taylor vs Kanye</string>
     <string name="try_again_button">Try Again 🎤</string>
+    <string name="start_game">Let\'s Rock! 🎸</string>
+    <string name="leaderboard">High Scores 🏆</string>
+    <string name="gameplay_heading">Choose your preferred gameplay:</string>
+    <string name="speed_switch_text">SPEED</string>
+    <string name="controls_switch_text">CONTROLS</string>
+    <string name="back_to_menu">back to menu</string>
+    <string name="enter_your_name_hint">Enter your name</string>
 </resources>

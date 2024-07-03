@@ -13,6 +13,19 @@
         android:layout_height="match_parent"
         app:srcCompat="@drawable/bg"
         android:scaleType="centerCrop"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/score_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="0000"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:fontFamily="@font/baloo_tamma"
+        android:layout_marginLeft="@dimen/default_margin"
+        >
+    </com.google.android.material.textview.MaterialTextView>
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/main_FAB_left"
@@ -78,6 +91,7 @@
             app:srcCompat="@drawable/bracelet_new" />
     </androidx.appcompat.widget.LinearLayoutCompat>
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/full_matrix"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/default_top_layout"
@@ -92,7 +106,7 @@
         android:gravity="bottom"
         >
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/main_IMG_taylor_left"
+            android:id="@+id/main_IMG_taylor_1"
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
             app:srcCompat="@drawable/taylor"
@@ -108,7 +122,7 @@
         android:gravity="bottom"
         >
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/main_IMG_taylor_center"
+            android:id="@+id/main_IMG_taylor_2"
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
             app:srcCompat="@drawable/taylor"
@@ -123,14 +137,47 @@
         android:gravity="bottom"
         >
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/main_IMG_taylor_right"
+            android:id="@+id/main_IMG_taylor_3"
             android:layout_width="@dimen/img_width_height"
             android:layout_height="@dimen/img_width_height"
             app:srcCompat="@drawable/taylor"
-
             android:layout_gravity="center" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="bottom"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_taylor_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/taylor"
+                android:layout_gravity="center" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="bottom"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_taylor_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/taylor"
+                android:layout_gravity="center" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 
@@ -160,7 +207,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_1_2"
+                android:id="@+id/main_IMG_kanye_2_1"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -168,7 +215,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_1_3"
+                android:id="@+id/main_IMG_kanye_3_1"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -176,7 +223,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_1_4"
+                android:id="@+id/main_IMG_kanye_4_1"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -184,7 +231,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_1_5"
+                android:id="@+id/main_IMG_kanye_5_1"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -192,7 +239,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_1_6"
+                android:id="@+id/main_IMG_kanye_6_1"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -210,7 +257,7 @@
             android:layout_gravity="clip_horizontal">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_2_1"
+                android:id="@+id/main_IMG_kanye_1_2"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -226,7 +273,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_2_3"
+                android:id="@+id/main_IMG_kanye_3_2"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -234,7 +281,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_2_4"
+                android:id="@+id/main_IMG_kanye_4_2"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -242,7 +289,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_2_5"
+                android:id="@+id/main_IMG_kanye_5_2"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -250,7 +297,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_2_6"
+                android:id="@+id/main_IMG_kanye_6_2"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -269,7 +316,7 @@
             android:layout_gravity="center_horizontal">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_3_1"
+                android:id="@+id/main_IMG_kanye_1_3"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -277,7 +324,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_3_2"
+                android:id="@+id/main_IMG_kanye_2_3"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -293,7 +340,108 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_4_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_5_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_6_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_1_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_2_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/main_IMG_kanye_3_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_4_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_5_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_6_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_1_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_2_5"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -309,7 +457,23 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"/>
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_kanye_3_6"
+                android:id="@+id/main_IMG_kanye_4_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_5_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/kanye"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_kanye_6_5"
                 android:layout_width="@dimen/img_width_height"
                 android:layout_height="@dimen/img_width_height"
                 app:srcCompat="@drawable/kanye"
@@ -320,9 +484,305 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+
+
+
     </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/trophys_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hearts_layout"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/taylors_margin_default">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_1_1"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_2_1"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_3_1"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_4_1"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_5_1"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_6_1"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_1_2"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_2_2"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_3_2"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_4_2"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_5_2"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_6_2"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_1_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_2_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_3_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_4_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_5_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_6_3"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_1_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_2_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_3_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_4_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_5_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_6_4"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_1_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_2_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_3_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_4_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_5_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_trophy_6_5"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                app:srcCompat="@drawable/vma_trophy"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 </RelativeLayout>

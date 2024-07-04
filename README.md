@@ -26,9 +26,3 @@ Welcome to the Taylor vs Kanye Game! This fun and interactive game involves dodg
 ### High Scores
 <img src="https://github.com/GalAlfandary/Taylor-vs-Kanye/assets/138819382/dc990b70-7b1b-4209-a33c-65860a9c714a" alt="High Scores" width="300">
 
-
-
-## Demo Video
-
-Click the image below to watch the demo video:
-

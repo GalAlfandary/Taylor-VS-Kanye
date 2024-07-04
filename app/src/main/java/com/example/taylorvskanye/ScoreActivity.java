@@ -13,7 +13,6 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.example.taylorvskanye.Fragments.ListFragment;
 import com.example.taylorvskanye.Models.Player;
 import com.example.taylorvskanye.Models.PlayerList;
 import com.example.taylorvskanye.utilities.SharePreferencesManagerV3;
@@ -33,7 +32,6 @@ public class ScoreActivity extends AppCompatActivity {
     private MaterialButton save_score_btn;
     private MaterialTextView score;
     private EditText editText_name;
-    private ListFragment listFragment;
     private LocationManager locationManager;
     private double lat;
     private double lon;
@@ -88,7 +86,6 @@ public class ScoreActivity extends AppCompatActivity {
         if (playerList == null) {
             playerList = new PlayerList();
         }
-
         playerList.addPlayer(new Player()
                 .setName(editText_name.getText().toString())
                 .setScore(scoreValue)
@@ -105,7 +102,6 @@ public class ScoreActivity extends AppCompatActivity {
         playerListAsJson = gson.toJson(playerList);
         SharePreferencesManagerV3.getInstance().putString("playerList", playerListAsJson);
         highScores();
-
     }
 
     private void findViews() {

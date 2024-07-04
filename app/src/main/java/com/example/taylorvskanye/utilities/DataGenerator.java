@@ -3,9 +3,6 @@ package com.example.taylorvskanye.utilities;
 import com.example.taylorvskanye.Models.Player;
 import com.example.taylorvskanye.Models.PlayerList;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 
 
 public class DataGenerator {

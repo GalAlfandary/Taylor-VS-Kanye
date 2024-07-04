@@ -1,4 +1,4 @@
-package com.example.taylorvskanye;
+package com.example.taylorvskanye.Interface;
 
 public interface GameEventListener {
     void onCollision();

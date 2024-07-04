@@ -6,6 +6,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
+import com.example.taylorvskanye.Interface.MoveCallback;
+
 public class MoveDetector {
 
     private SensorManager sensorManager;
@@ -52,16 +54,15 @@ public class MoveDetector {
                     moveCallback.moveRight();
                 }
             }
-
-//            if (y > 6.0) {
-//                if (moveCallback != null) {
-//                    moveCallback.moveY();
-//                }
-//            } else if (y < -6.0) {
-//                if (moveCallback != null) {
-//                    moveCallback.moveY();
-//                }
-//            }
+            if (y > 3.0) {
+                if (moveCallback != null) {
+                    moveCallback.moveFaster();
+                }
+            } else if (y < -3.0) {
+                if (moveCallback != null) {
+                    moveCallback.moveSlower();
+                }
+            }
         }
     }
 

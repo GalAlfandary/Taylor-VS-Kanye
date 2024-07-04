@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="45sp"
             android:textStyle="bold"
             app:fontFamily="@font/baloo_tamma"
             tools:text="000"

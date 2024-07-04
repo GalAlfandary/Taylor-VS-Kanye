@@ -1,7 +1,8 @@
 package com.example.taylorvskanye.Models;
 
+import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class PlayerList {
     private String name;
@@ -33,6 +34,7 @@ public class PlayerList {
         return this;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "PlayerList{" +

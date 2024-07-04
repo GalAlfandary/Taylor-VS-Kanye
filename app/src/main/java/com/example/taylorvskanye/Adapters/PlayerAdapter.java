@@ -3,12 +3,11 @@ package com.example.taylorvskanye.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.taylorvskanye.Callback_ListItemClicked;
+import com.example.taylorvskanye.Interface.Callback_ListItemClicked;
 import com.example.taylorvskanye.Models.Player;
 import com.example.taylorvskanye.R;
 import com.google.android.material.textview.MaterialTextView;

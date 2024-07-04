@@ -1,5 +1,7 @@
 package com.example.taylorvskanye.Models;
 
+import androidx.annotation.NonNull;
+
 public class Player {
     private String name;
     private int score;
@@ -42,6 +44,7 @@ public class Player {
         return this;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Player{" +

@@ -7,18 +7,21 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.taylorvskanye.utilities.SoundPlayer;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
 public class MenuActivity extends AppCompatActivity {
 
+    private final long FAST = 300L;
+    private final long SLOW = 500L;
+
     private SwitchMaterial fast_or_slow;
     private SwitchMaterial sensors_or_buttons;
     private MaterialButton start_game_btn;
     private MaterialButton high_scores_btn;
-    private MediaPlayer mediaPlayer;
     private Context context;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +33,10 @@ public class MenuActivity extends AppCompatActivity {
 
     private void initViews() {
         start_game_btn.setOnClickListener(view -> {
-
-            //makeSound(R.raw.ready_for_it);
-            long speed =500L; //slow game
+            long speed =SLOW; //slow game
             int controls = 1 ; //buttons
             if (fast_or_slow.isChecked()){ //fast game
-                speed =300L;
+                speed =FAST;
             }
             if (sensors_or_buttons.isChecked()){ //sensors
                 controls = 0;
@@ -53,15 +54,6 @@ public class MenuActivity extends AppCompatActivity {
         high_scores_btn = findViewById(R.id.high_scores_btn);
     }
 
-    private void makeSound(int sound) {
-        if (mediaPlayer != null) {
-            mediaPlayer.stop();
-            mediaPlayer.release();
-            mediaPlayer = null;
-        }
-        mediaPlayer = MediaPlayer.create(context, sound);
-        mediaPlayer.start();
-    }
 
     private void startGame(long speed, int controls) {
         Intent intent = new Intent(MenuActivity.this, MainActivity.class);
@@ -78,10 +70,6 @@ public class MenuActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        if (mediaPlayer != null) {
-            mediaPlayer.release();
-            mediaPlayer = null;
-        }
         super.onDestroy();
     }
 }

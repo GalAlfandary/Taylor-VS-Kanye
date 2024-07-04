@@ -8,6 +8,8 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 
+import com.example.taylorvskanye.Interface.GameEventListener;
+import com.example.taylorvskanye.Interface.MoveCallback;
 import com.example.taylorvskanye.Logic.GameLogic;
 import com.example.taylorvskanye.utilities.SignalManager;
 import com.example.taylorvskanye.utilities.SoundPlayer;
@@ -17,8 +19,10 @@ import com.google.android.material.textview.MaterialTextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity implements GameEventListener,MoveCallback {
+public class MainActivity extends AppCompatActivity implements GameEventListener, MoveCallback {
 
+    private final long FAST = 300L;
+    private final long SLOW = 500L;
     private static long DELAY ;
     private static int controlType;
 
@@ -54,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements GameEventListener
     private SoundPlayer soundPlayer;
 
     private Timer timer;
+    private TimerTask gameTask;
+
     private MoveDetector moveDetector;
 
 
@@ -98,7 +104,6 @@ public class MainActivity extends AppCompatActivity implements GameEventListener
         Intent intent = new Intent(this, ScoreActivity.class);
         intent.putExtra(ScoreActivity.KEY_STATUS, status);
         intent.putExtra(ScoreActivity.KEY_SCORE, score);
-        //Intent intent = new Intent(this, HighScoreActivity.class);
         startActivity(intent);
         finish();
     }
@@ -153,7 +158,6 @@ public class MainActivity extends AppCompatActivity implements GameEventListener
                 boolean isKanyeVisible = matrix[row][col] == GameLogic.KANYE;
                 boolean isTrophyVisible = matrix[row][col] == GameLogic.TROPHY;
 
-                // Assuming you have separate image views for Kanye and trophies
                 AppCompatImageView kanyeImageView = kanyeImages[row][col];
                 AppCompatImageView trophyImageView = trophyImages[row][col];
 
@@ -198,15 +202,20 @@ public class MainActivity extends AppCompatActivity implements GameEventListener
     private void startTimer() {
         if (timer == null) {
             timer = new Timer();
-            timer.schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    gameLogic.updateFallingObjects();
-                    runOnUiThread(() -> updateUi());
-                    gameLogic.checkCollision();
-                }
-            }, 0L, DELAY);
+        } else {
+            timer.cancel();
+            timer = new Timer();
         }
+
+        gameTask = new TimerTask() {
+            @Override
+            public void run() {
+                gameLogic.updateFallingObjects();
+                runOnUiThread(() -> updateUi());
+                gameLogic.checkCollision();
+            }
+        };
+        timer.schedule(gameTask, 0L, DELAY);
     }
 
     @Override
@@ -255,9 +264,15 @@ public class MainActivity extends AppCompatActivity implements GameEventListener
         runOnUiThread(this::updateTaylorPosition);
     }
 
-//    @Override
-//    public void moveY() {
-//        gameLogic.moveTaylorRight(); // or gameLogic.moveTaylorLeft(); depending on how you want to handle X movements
-//        runOnUiThread(this::updateTaylorPosition);
-//    }
+    @Override
+    public void moveFaster() {
+        DELAY = FAST;
+        startTimer();
+    }
+
+    @Override
+    public void moveSlower() {
+        DELAY=SLOW;
+        startTimer();
+    }
 }

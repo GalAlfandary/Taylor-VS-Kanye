@@ -2,7 +2,7 @@ package com.example.taylorvskanye.Logic;
 
 import android.util.Log;
 
-import com.example.taylorvskanye.GameEventListener;
+import com.example.taylorvskanye.Interface.GameEventListener;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -18,8 +18,8 @@ public class GameLogic {
     private int crashes = 0;
     private int score = 0;
     private int taylorLane = 2; // Start in the middle lane
-    private int[][] matrix = new int[ROWS_COUNT][LANE_COUNT];
-    private Random random = new Random();
+    private final int[][] matrix = new int[ROWS_COUNT][LANE_COUNT];
+    private final Random random = new Random();
     private GameEventListener gameEventListener;
 
 

@@ -10,23 +10,25 @@ Welcome to the Taylor vs Kanye Game! This fun and interactive game involves dodg
 - **High Score Tracking:** Keep track of your top scores and see your ranking.
 - **Google Maps Integration:** View the locations where high scores were achieved.
 - **Save and Load Data:** Uses SharedPreferences to save and load game data.
+- **Customizable Settings:** Choose the speed and controls of the gameplay to suit your preferences.
 
 ## Screenshots
 
 ### Main Menu
-![Main Menu](https://github.com/yourusername/your-repo/blob/main/path-to-images/main_menu.png)
+<img src="https://github.com/GalAlfandary/Taylor-vs-Kanye/assets/138819382/ad09b361-ccb4-460b-931c-b45318e05c84" alt="Main Menu" width="300">
 
 ### Gameplay
-![Gameplay](https://github.com/yourusername/your-repo/blob/main/path-to-images/gameplay.png)
+<img src="https://github.com/GalAlfandary/Taylor-vs-Kanye/assets/138819382/9f5ea126-1276-4b0d-b514-1e84c60a686f" alt="Gameplay" width="300">
 
 ### End Game Screen
+<img src="https://github.com/GalAlfandary/Taylor-vs-Kanye/assets/138819382/c9a51530-58d3-41f2-bd6f-b5e332b2c1a9" alt="End Game Screen" width="300">
 
 ### High Scores
-![High Scores](https://github.com/yourusername/your-repo/blob/main/path-to-images/high_scores.png)
+<img src="https://github.com/GalAlfandary/Taylor-vs-Kanye/assets/138819382/dc990b70-7b1b-4209-a33c-65860a9c714a" alt="High Scores" width="300">
+
 
 
 ## Demo Video
 
 Click the image below to watch the demo video:
 
-[![Watch the video](https://github.com/yourusername/your-repo/blob/main/path-to-images/video_thumbnail.png)](https://your-video-link.com)

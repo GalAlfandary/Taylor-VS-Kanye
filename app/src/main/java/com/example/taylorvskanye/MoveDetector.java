@@ -50,17 +50,16 @@ public class MoveDetector {
                 }
             } else if (x < -3.0) {
                 if (moveCallback != null) {
-
                     moveCallback.moveRight();
                 }
             }
-            if (y > 3.0) {
-                if (moveCallback != null) {
-                    moveCallback.moveFaster();
-                }
-            } else if (y < -3.0) {
+            if (y > 5.0) {
                 if (moveCallback != null) {
                     moveCallback.moveSlower();
+                }
+            } else if (y < 5.0) {
+                if (moveCallback != null) {
+                    moveCallback.moveFaster();
                 }
             }
         }

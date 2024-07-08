@@ -17,10 +17,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.material.textview.MaterialTextView;
 
 public class MapFragment extends Fragment{
-    private MaterialTextView map_LBL_title;
     private GoogleMap mMap;
 
     public MapFragment() {
@@ -48,7 +46,6 @@ public class MapFragment extends Fragment{
         return view;
     }
 
-
     public void zoom(double lat, double lon) {
         if (mMap != null) {
             LatLng location = new LatLng(lat, lon);
@@ -56,5 +53,4 @@ public class MapFragment extends Fragment{
             mMap.addMarker(new MarkerOptions().position(location).title("Selected Location"));
         }
     }
-
 }

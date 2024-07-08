@@ -16,8 +16,11 @@ import com.example.taylorvskanye.Adapters.PlayerAdapter;
 import com.example.taylorvskanye.Interface.Callback_ListItemClicked;
 import com.example.taylorvskanye.Models.PlayerList;
 import com.example.taylorvskanye.R;
+import com.example.taylorvskanye.utilities.DataGenerator;
+import com.example.taylorvskanye.utilities.PlayerListManager;
 import com.example.taylorvskanye.utilities.SharePreferencesManagerV3;
 import com.google.gson.Gson;
+
 
 public class ListFragment extends Fragment {
 
@@ -43,26 +46,23 @@ public class ListFragment extends Fragment {
         return v;
     }
 
+
     private void initViews() {
-        Gson gson =new Gson();
         //Load from data manager
+//        Gson gson = new Gson();
 //        playerList = DataGenerator.generatePlayerList();
 //        String playerListAsJson =gson.toJson(playerList);
 //        SharePreferencesManagerV3.getInstance().putString("playerList", playerListAsJson);
 //        Log.d("JSON",playerListAsJson);
 
-        String playerListAsJson = SharePreferencesManagerV3.getInstance().getString("playerList", "");
-        playerList =gson.fromJson(playerListAsJson, PlayerList.class);
-        Log.d("PlayerList", playerList.toString());
-
-
-
-        PlayerAdapter playerAdapter=new PlayerAdapter(playerList.getPlayers(),callbackListItemClicked);
+        playerList = PlayerListManager.loadPlayerList();
+        PlayerAdapter playerAdapter = new PlayerAdapter(playerList.getPlayers(), callbackListItemClicked);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         main_LST_players.setLayoutManager(linearLayoutManager);
         main_LST_players.setAdapter(playerAdapter);
     }
+
 
     public PlayerList getPlayerList() {
         return playerList;

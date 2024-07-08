@@ -15,13 +15,9 @@ import androidx.core.app.ActivityCompat;
 
 import com.example.taylorvskanye.Models.Player;
 import com.example.taylorvskanye.Models.PlayerList;
-import com.example.taylorvskanye.utilities.SharePreferencesManagerV3;
+import com.example.taylorvskanye.utilities.PlayerListManager;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
-import com.google.gson.Gson;
-
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class ScoreActivity extends AppCompatActivity {
     public static final String KEY_STATUS = "KEY_STATUS";
@@ -79,30 +75,18 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private void savePlayerData(int scoreValue) {
-        Gson gson = new Gson();
-        String playerListAsJson = SharePreferencesManagerV3.getInstance().getString("playerList", "");
-        PlayerList playerList = gson.fromJson(playerListAsJson, PlayerList.class);
-
-        if (playerList == null) {
-            playerList = new PlayerList();
-        }
+        PlayerList playerList = PlayerListManager.loadPlayerList();
+        Log.d("playerList",playerList.toString());
         playerList.addPlayer(new Player()
                 .setName(editText_name.getText().toString())
                 .setScore(scoreValue)
                 .setLat(lat)
                 .setLon(lon)
         );
-        ArrayList<Player> players = playerList.getPlayers();
-        // Sort players by score in descending order
-        Collections.sort(players, (player1, player2) -> Integer.compare(player2.getScore(), player1.getScore()));
-        if (players.size() > 10) {
-            players = new ArrayList<>(players.subList(0, 10));
-        }
-        playerList.setPlayers(players);
-        playerListAsJson = gson.toJson(playerList);
-        SharePreferencesManagerV3.getInstance().putString("playerList", playerListAsJson);
+        PlayerListManager.savePlayerList(playerList);
         highScores();
     }
+
 
     private void findViews() {
         LBL_status = findViewById(R.id.LBL_status);

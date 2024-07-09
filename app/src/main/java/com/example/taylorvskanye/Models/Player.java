@@ -8,6 +8,9 @@ public class Player {
     private double lat;
     private double lon;
 
+    public Player() {
+    }
+
     public String getName() {
         return name;
     }
